@@ -1,4 +1,5 @@
 package com.tigo.contrato.plancolaborador.model;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -10,7 +11,6 @@ import org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode;
 import org.apache.pdfbox.pdmodel.encryption.InvalidPasswordException;
 import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
-
 
 public class ContratoHFC {
 
@@ -223,33 +223,23 @@ public class ContratoHFC {
 			}
 
 			if (premiumPack != "") {
-				switch (premiumPack) {
-				case "PP1":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 133);
-					break;
-				case "PP2":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 125);
-					break;
-				case "PP3":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 117);
-					break;
-				case "PP4":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 110);
-					break;
-				case "PP5":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 102);
-					break;
-				case "PP6":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 94);
-					break;
-				case "PP7":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 87);
-					break;
-				case "PP8":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 79);
-					break;
-				}
 
+				if (premiumPack.contains("PP1"))
+					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 133);
+				if (premiumPack.contains("PP2"))
+					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 125);
+				if (premiumPack.contains("PP3"))
+					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 117);
+				if (premiumPack.contains("PP4"))
+					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 110);
+				if (premiumPack.contains("PP5"))
+					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 102);
+				if (premiumPack.contains("PP6"))
+					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 94);
+				if (premiumPack.contains("PP7"))
+					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 87);
+				if (premiumPack.contains("PP8"))
+					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 79);
 			}
 
 			EscribirPalabraHorizontal(font, page, doc, observaciones, fontSize, 291, 68);

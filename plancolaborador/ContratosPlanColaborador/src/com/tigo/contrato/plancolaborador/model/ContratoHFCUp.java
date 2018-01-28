@@ -193,36 +193,23 @@ public class ContratoHFCUp {
 				}
 
 			}
-
-			if (premiumPack != "") {
-				switch (premiumPack) {
-				case "PP1":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 739, 179);
-					break;
-				case "PP2":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 739, 171);
-					break;
-				case "PP3":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 739, 163);
-					break;
-				case "PP4":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 739, 154);
-					break;
-				case "PP5":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 739, 146);
-					break;
-				case "PP6":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 739, 138);
-					break;
-				case "PP7":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 739, 130);
-					break;
-				case "PP8":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 739, 121);
-					break;
-				}
-
-			}
+			
+			if(premiumPack.contains("PP1"))
+				EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 739, 179);
+			if(premiumPack.contains("PP2"))
+				EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 739, 171);
+			if(premiumPack.contains("PP3"))
+				EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 739, 163);
+			if(premiumPack.contains("PP4"))
+				EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 739, 154);
+			if(premiumPack.contains("PP5"))
+				EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 739, 146);
+			if(premiumPack.contains("PP6"))
+				EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 739, 138);
+			if(premiumPack.contains("PP7"))
+				EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 739, 130);
+			if(premiumPack.contains("PP8"))
+				EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 739, 121);
 
 			EscribirPalabraHorizontal(font, page, doc, observaciones, fontSize, 715, 100);
 
