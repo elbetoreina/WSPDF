@@ -3,8 +3,7 @@ package com.tigo.contrato.plancolaborador.webservices;
 import java.io.File;
 import java.io.IOException;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+
 import java.util.UUID;
 
 import javax.servlet.ServletContext;
@@ -16,7 +15,6 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
 
-
 import com.tigo.contrato.plancolaborador.model.ContratoHFCUp;
 import com.tigo.contrato.plancolaborador.util.FileUtil;
 
@@ -27,13 +25,8 @@ public class ContratoHFCUpDescarga {
 	@Produces("application/pdf")
 	@Path("/descarga")
 	public Response getFile(@Context ServletContext ctx, @QueryParam("nombre") String nombreCliente,
-			@QueryParam("fechaNac") String fechaNacimiento, @QueryParam("edad") String edad,
-			@QueryParam("dpi") String dpi, @QueryParam("dpiext") String dpiExtendido,
-			@QueryParam("dirinst") String direccionInstalacion, @QueryParam("tel") String telefonoCasa,
-			@QueryParam("cel") String telefonoCelular, @QueryParam("telof") String telefonoOficina,
-			@QueryParam("telcon") String telefonoContacto, @QueryParam("sexo") String sexo,
-			@QueryParam("estciv") String estadoCivil, @QueryParam("facnom") String facturaNombre,
-			@QueryParam("nit") String nit, @QueryParam("email") String email,
+			@QueryParam("dpi") String dpi, @QueryParam("codcli") String codigoCliente,
+			@QueryParam("dirinst") String direccionInstalacion, @QueryParam("telcon") String telefonoContacto,
 			@QueryParam("sind") String servicioIndividual, @QueryParam("combo") String combo,
 			@QueryParam("sadi") String servicioAdicional, @QueryParam("cadi") String cajaAdicional,
 			@QueryParam("ppack") String premiumPack, @QueryParam("obs") String observaciones
@@ -71,9 +64,9 @@ public class ContratoHFCUpDescarga {
 			contrato.setDpi("");
 		}
 
-		if (dpiExtendido != null) {
-			contrato.setDpiExtendido(dpiExtendido.replaceAll("\u00a0", " "));
-			contrato.setDpiExtendido(contrato.getDpiExtendido().replaceAll("\uFFFd", ""));
+		if (codigoCliente != null) {
+			contrato.setDpiExtendido(codigoCliente.replaceAll("\u00a0", " "));
+			contrato.setDpiExtendido(contrato.getCodigoCliente().replaceAll("\uFFFd", ""));
 		} else {
 			contrato.setDpiExtendido("");
 		}
@@ -85,67 +78,11 @@ public class ContratoHFCUpDescarga {
 			contrato.setDireccionInstalacion("");
 		}
 
-		if (telefonoCasa != null) {
-			contrato.setTelefonoCasa(telefonoCasa.replaceAll("\u00a0", " "));
-			contrato.setTelefonoCasa(contrato.getTelefonoCasa().replaceAll("\uFFFd", ""));
-		} else {
-			contrato.setTelefonoCasa("");
-		}
-
-		if (telefonoCelular != null) {
-			contrato.setTelefonoCelular(telefonoCelular.replaceAll("\u00a0", " "));
-			contrato.setTelefonoCelular(contrato.getTelefonoCelular().replaceAll("\uFFFd", ""));
-		} else {
-			contrato.setTelefonoCelular("");
-		}
-
-		if (telefonoOficina != null) {
-			contrato.setTelefonoOficina(telefonoOficina.replaceAll("\u00a0", " "));
-			contrato.setTelefonoOficina(contrato.getTelefonoOficina().replaceAll("\uFFFd", ""));
-		} else {
-			contrato.setTelefonoOficina("");
-		}
-
 		if (telefonoContacto != null) {
 			contrato.setTelefonoContacto(telefonoContacto.replaceAll("\u00a0", " "));
 			contrato.setTelefonoContacto(contrato.getTelefonoContacto().replaceAll("\uFFFd", ""));
 		} else {
 			contrato.setTelefonoContacto("");
-		}
-
-		if (sexo != null) {
-			contrato.setSexo(sexo.replaceAll("\u00a0", " "));
-			contrato.setSexo(contrato.getSexo().replaceAll("\uFFFd", ""));
-		} else {
-			contrato.setSexo("");
-		}
-
-		if (estadoCivil != null) {
-			contrato.setEstadoCivil(estadoCivil.replaceAll("\u00a0", " "));
-			contrato.setEstadoCivil(contrato.getEstadoCivil().replaceAll("\uFFFd", ""));
-		} else {
-			contrato.setEstadoCivil("");
-		}
-
-		if (nombreCliente != null) {
-			contrato.setFacturaNombre(nombreCliente.replaceAll("\u00a0", " "));
-			contrato.setFacturaNombre(contrato.getFacturaNombre().replaceAll("\uFFFd", ""));
-		} else {
-			contrato.setFacturaNombre("");
-		}
-
-		if (nit != null) {
-			contrato.setNit(nit.replaceAll("\u00a0", " "));
-			contrato.setNit(contrato.getNit().replaceAll("\uFFFd", ""));
-		} else {
-			contrato.setNit("");
-		}
-
-		if (email != null) {
-			contrato.setEmail(email.replaceAll("\u00a0", " "));
-			contrato.setEmail(contrato.getEmail().replaceAll("\uFFFd", ""));
-		} else {
-			contrato.setEmail("");
 		}
 
 		if (servicioIndividual != null) {
@@ -190,29 +127,7 @@ public class ContratoHFCUpDescarga {
 			contrato.setObservaciones("");
 		}
 
-		SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-		try {
-			if (fechaNacimiento != null) {
-				contrato.setFechaNacimiento(df.parse(fechaNacimiento));
-			} else {
-				contrato.setFechaNacimiento(df.parse("01/01/1900"));
-			}
-
-		} catch (ParseException e) {
-			e.printStackTrace(); // test
-		}
-
-		if (edad != null) {
-			contrato.setEdad(Integer.parseInt(edad));
-		} else {
-			contrato.setEdad(0);
-		}
-
-		
-
 		File respuesta = contrato.escribirDatosMovilHorizontal();
-
-	
 
 		ResponseBuilder response = Response.ok((Object) respuesta);
 		response.header("Content-Disposition", "attachment; filename=contrato-movil-plan-colaborador.pdf");
