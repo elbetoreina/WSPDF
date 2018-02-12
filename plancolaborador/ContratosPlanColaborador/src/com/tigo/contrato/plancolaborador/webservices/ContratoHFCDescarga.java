@@ -190,12 +190,12 @@ public class ContratoHFCDescarga {
 			contrato.setObservaciones("");
 		}
 
-		SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 		try {
 			if (fechaNacimiento != null) {
 				contrato.setFechaNacimiento(df.parse(fechaNacimiento));
 			} else {
-				contrato.setFechaNacimiento(df.parse("01/01/1900"));
+				contrato.setFechaNacimiento(df.parse("1900-01-01"));
 			}
 
 		} catch (ParseException e) {

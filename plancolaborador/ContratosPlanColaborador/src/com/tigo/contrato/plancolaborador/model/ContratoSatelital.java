@@ -47,7 +47,7 @@ public class ContratoSatelital {
 
 			int fontSize = 7;
 
-			SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 
 			EscribirPalabraHorizontal(font, page, doc, nombre, fontSize, 20, 585);
 			EscribirPalabraHorizontal(font, page, doc, nombre, fontSize, 20, 470);
@@ -117,44 +117,7 @@ public class ContratoSatelital {
 			}
 
 			if (cajaAdicional != "") {
-				switch (cajaAdicional) {
-				case "1HPU":
-					EscribirPalabraHorizontal(font, page, doc, "1 CAJA HD PAGO UNICO", fontSize, 320, 460);
-					break;
-				case "2HPU":
-					EscribirPalabraHorizontal(font, page, doc, "2 CAJAS HD PAGO UNICO", fontSize, 320, 460);
-					break;
-				case "3HPU":
-					EscribirPalabraHorizontal(font, page, doc, "3 CAJAS HD PAGO UNICO", fontSize, 320, 460);
-					break;
-				case "1HPM":
-					EscribirPalabraHorizontal(font, page, doc, "1 CAJA HD PAGO MENSUAL", fontSize, 320, 460);
-					break;
-				case "2HPM":
-					EscribirPalabraHorizontal(font, page, doc, "2 CAJAS HD PAGO MENSUAL", fontSize, 320, 460);
-					break;
-				case "3HPM":
-					EscribirPalabraHorizontal(font, page, doc, "3 CAJAS HD PAGO MENSUAL", fontSize, 320, 460);
-					break;
-				case "1DPU":
-					EscribirPalabraHorizontal(font, page, doc, "1 CAJA DIGITAL PAGO UNICO", fontSize, 320, 460);
-					break;
-				case "2DPU":
-					EscribirPalabraHorizontal(font, page, doc, "2 CAJAS DIGITALES PAGO UNICO", fontSize, 320, 460);
-					break;
-				case "3DPU":
-					EscribirPalabraHorizontal(font, page, doc, "3 CAJAS DIGITALES PAGO UNICO", fontSize, 320, 460);
-					break;
-				case "1DPM":
-					EscribirPalabraHorizontal(font, page, doc, "1 CAJA DIGITAL PAGO MENSUAL", fontSize, 320, 460);
-					break;
-				case "2DPM":
-					EscribirPalabraHorizontal(font, page, doc, "2 CAJAS DIGITALES PAGO MENSUAL", fontSize, 320, 460);
-					break;
-				case "3DPM":
-					EscribirPalabraHorizontal(font, page, doc, "3 CAJAS DIGITALES PAGO MENSUAL", fontSize, 320, 460);
-					break;
-				}
+				EscribirPalabraHorizontal(font, page, doc, cajaAdicional, fontSize, 320, 460);
 
 			}
 
@@ -169,12 +132,14 @@ public class ContratoSatelital {
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 411, 469);
 			}
 
-			EscribirPalabraHorizontal(font, page, doc, nombre, fontSize, 330, 185);			
+			EscribirPalabraHorizontal(font, page, doc, nombre, fontSize, 330, 185);
 
 			doc.save(archivoBase);
 			doc.close();
 
-		} catch (InvalidPasswordException e) {
+		} catch (
+
+		InvalidPasswordException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
