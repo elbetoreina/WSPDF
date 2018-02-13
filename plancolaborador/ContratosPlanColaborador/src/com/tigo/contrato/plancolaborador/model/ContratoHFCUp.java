@@ -143,7 +143,7 @@ public class ContratoHFCUp {
 				EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 788, 295);
 			}
 			
-			//Hook Full Para Jenkins
+			//Hook Full Para Jenkins test
 
 			if (cajaAdicional != "") {
 				switch (cajaAdicional) {
