@@ -19,7 +19,7 @@ import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import java.text.SimpleDateFormat;
 
 
-//ADDED A COMMENT IN PROGRAM TEST
+//ADDED A COMMENT IN PROGRAM TEST prueba
 public class Contrato {
 
 	private File archivoBase;
