@@ -142,6 +142,8 @@ public class ContratoHFCUp {
 			if (servicioAdicional.toUpperCase().contains("Y")) {
 				EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 788, 295);
 			}
+			
+			//added a comment
 
 			if (cajaAdicional != "") {
 				switch (cajaAdicional) {
