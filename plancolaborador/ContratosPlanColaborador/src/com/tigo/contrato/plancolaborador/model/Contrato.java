@@ -19,7 +19,7 @@ import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import java.text.SimpleDateFormat;
 
 
-//Ejecucion de SonarQube Test - Prueba
+//Ejecucion de SonarQube Test - Prueba De Envio a Jenkins
 public class Contrato {
 
 	private File archivoBase;
