@@ -143,7 +143,7 @@ public class ContratoHFCUp {
 				EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 788, 295);
 			}
 			
-			//added a comment plus another comment
+			//added a comment plus another comment and another comment
 
 			if (cajaAdicional != "") {
 				switch (cajaAdicional) {
