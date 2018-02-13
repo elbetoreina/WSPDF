@@ -18,6 +18,8 @@ import org.apache.pdfbox.pdmodel.PDPageContentStream.AppendMode;
 import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import java.text.SimpleDateFormat;
 
+
+//ADDED A COMMENT
 public class Contrato {
 
 	private File archivoBase;
