@@ -175,40 +175,22 @@ public class ContratoHFC {
 				switch (cajaAdicional) {
 				case "1 CAJA DIGITAL PAGO MENSUAL":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 283, 196);
-					break;
-				case "1CR":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 283, 187);
-					break;
+					break;				
 				case "1 CAJA HD PAGO MENSUAL":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 283, 179);
-					break;
-				case "1HDP":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 283, 169);
-					break;
+					break;				
 				case "2 CAJAS DIGITAL PAGO MENSUAL":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 323, 196);
-					break;
-				case "2CR":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 323, 187);
-					break;
+					break;				
 				case "2 CAJAS HD PAGO MENSUAL":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 323, 179);
-					break;
-				case "2HDP":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 323, 169);
-					break;
+					break;				
 				case "3 CAJAS DIGITAL PAGO MENSUAL":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 364, 196);
-					break;
-				case "3CR":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 364, 187);
-					break;
+					break;				
 				case "3 CAJAS HD PAGO MENSUAL":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 364, 179);
-					break;
-				case "3HDP":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 364, 169);
-					break;
+					break;				
 				case "1 CAJA DIGITAL PAGO UNICO":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 404, 196);
 					break;
