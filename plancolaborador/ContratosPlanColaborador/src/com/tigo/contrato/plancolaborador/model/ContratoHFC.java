@@ -185,7 +185,7 @@ public class ContratoHFC {
 				case "1HDP":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 283, 169);
 					break;
-				case "2SR":
+				case "2 CAJAS DIGITALES PAGO UNICO":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 323, 196);
 					break;
 				case "2CR":
