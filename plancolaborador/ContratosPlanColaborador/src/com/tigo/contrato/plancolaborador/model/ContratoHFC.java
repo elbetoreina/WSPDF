@@ -173,7 +173,7 @@ public class ContratoHFC {
 
 			if (cajaAdicional != "") {
 				switch (cajaAdicional) {
-				case "1 CAJA DIGITAL PAGO UNICO":
+				case "1 CAJA DIGITAL PAGO MENSUAL":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 283, 196);
 					break;
 				case "1CR":
@@ -185,7 +185,7 @@ public class ContratoHFC {
 				case "1HDP":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 283, 169);
 					break;
-				case "2 CAJAS DIGITALES PAGO UNICO 2":
+				case "2 CAJAS DIGITALES PAGO MENSUAL":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 323, 196);
 					break;
 				case "2CR":
