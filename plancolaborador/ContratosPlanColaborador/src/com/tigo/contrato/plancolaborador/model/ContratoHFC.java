@@ -109,30 +109,12 @@ public class ContratoHFC {
 
 			if (servicioIndividual != "") {
 				switch (servicioIndividual) {
-				case "TVB":
+				case "Cable Básico":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 483);
 					break;
-				case "TVA":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 476);
-					break;
-				case "TVH":
+				case "Tv HD":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 466);
-					break;
-				case "I2":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 457);
-					break;
-				case "I3":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 449);
-					break;
-				case "I5":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 440);
-					break;
-				case "I10":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 431);
-					break;
-				case "I25":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 318, 423);
-					break;
+					break;				
 				}
 
 			}
