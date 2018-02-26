@@ -147,49 +147,40 @@ public class ContratoHFCUp {
 
 			if (cajaAdicional != "") {
 				switch (cajaAdicional) {
-				case "1SR":
+				case "1 CAJA DIGITAL PAGO MENSUAL":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 701, 247);
-					break;
-				case "1CR":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 701, 238);
-					break;
-				case "1HD":
+					break;				
+				case "1 CAJA HD PAGO MENSUAL":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 701, 228);
-					break;
-				case "1HDP":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 701, 219);
-					break;
-				case "2SR":
+					break;				
+				case "2 CAJAS DIGITAL PAGO MENSUAL":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 745, 247);
-					break;
-				case "2CR":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 745, 238);
-					break;
-				case "2HD":
+					break;				
+				case "2 CAJAS HD PAGO MENSUAL":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 745, 228);
-					break;
-				case "2HDP":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 745, 219);
-					break;
-				case "3SR":
+					break;				
+				case "3 CAJAS DIGITAL PAGO MENSUAL":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 789, 247);
-					break;
-				case "3CR":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 789, 238);
-					break;
-				case "3HD":
+					break;				
+				case "3 CAJAS HD PAGO MENSUAL":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 789, 228);
-					break;
-				case "3HDP":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 789, 219);
-					break;
-				case "PUSR":
+					break;				
+				case "1 CAJA DIGITAL PAGO UNICO":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 831, 248);
 					break;
-				case "PUCR":
-					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 831, 239);
+				case "2 CAJAS DIGITAL PAGO UNICO":
+					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 831, 248);
 					break;
-				case "PUHD":
+				case "3 CAJAS DIGITAL PAGO UNICO":
+					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 831, 248);
+					break;				
+				case "1 CAJA HD PAGO UNICO":
+					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 831, 229);
+					break;
+				case "2 CAJAS HD PAGO UNICO":
+					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 831, 229);
+					break;
+				case "3 CAJAS HD PAGO UNICO":
 					EscribirPalabraHorizontal(font, page, doc, "X", fontSize, 831, 229);
 					break;
 				}
